@@ -1,0 +1,307 @@
+/* GRUNDLÆGGENDE WEBSITE STYLES - Disse styles definerer basis-udseendet for hele websitet */
+body {
+    font-family: 'Arial', sans-serif; /* Standard skrifttype for alt tekst */
+    background-color: #F8F9FA; /* Lysegrå baggrundsfarve for hele siden */
+}
+
+/* Speciel skrifttype (Bebas Neue) bruges til overskrifter 
+   Dette giver et mere moderne og professionelt look */
+h1, h5 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400; /* Normal tykkelse på teksten */
+    font-style: normal;  
+}
+
+/* NAVIGATION / HEADER STYLES - Styling af den øverste navigationsmenu - Denne sektion er altid synlig øverst på siden */
+.navbar {
+    box-shadow: 0 2px 6px #6B6D76; /* Let skygge under navigationen for dybdeeffekt */
+    background-color: #715745; /* Brun baggrundsfarve der matcher naturens tema */
+    padding: 20px; /* Giver plads omkring navigationselementer */
+}
+
+.navbar-nav {
+    color: white;
+}
+
+/* Styling af navbar links */
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Hvid tekstfarve for links */
+    transition: color 0.3s ease; /* Smooth farveovergang ved hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4E7046 !important; /* Grøn farve ved hover, matcher social links */
+}
+
+.navbar-brand {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: center; /* Centrerer logo/brand tekst */
+    color: #ffffff; /* Hvid tekstfarve for god kontrast mod den mørke baggrund */
+}
+
+/* HERO SEKTION STYLES - Styling af den store billede-slider øverst på forsiden - Dette er det første besøgende ser*/
+.carousel {
+    border-radius: 8px; /* Bløde hjørner på slideren */
+    overflow: hidden; /* Skjuler billeder der går ud over grænserne */
+    box-shadow: 0 4px 6px #6B6D76; /* Skyggeeffekt for at få slideren til at "svæve" */
+}
+
+/* KORT SEKTION STYLES - Styling af lokationskortene der viser forskellige steder - Kortene har hover-effekter for bedre brugerinteraktion */
+.card {
+    transition: transform 0.3s ease; /* Smooth animation når kortet løftes */
+    box-shadow: 0 2px 4px #6B6D76; /* Let skygge for dybdeeffekt */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Kort løfter sig 5px op ved hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fast højde sikrer ensartet udseende */
+    object-fit: cover; /* Billeder fylder området uden forvrængning */
+}
+
+/* KNAP STYLES - Styling af alle primære knapper på siden*/
+.btn-primary {
+    background-color: #4E7046; /* Grøn farve der matcher naturens tema */
+    border: none;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease; /* Smooth farveovergang ved hover */
+}
+
+.btn-primary:hover {
+    background-color: #334E58; /* Mørkere nuance ved hover */
+}
+
+/* INFO MENU STYLES - Styling af den ekspanderbare */
+.info-menu {
+    background-color: #E8E8E8; /* Let grå baggrund */
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Menu item container styler hvert menupunkt og dets indhold */
+.menu-item-container {
+    border-bottom: 1px solid #D0D0D0; /* Skillelinje mellem menupunkter */
+}
+
+.menu-item-container:last-child {
+    border-bottom: none; /* Fjerner skillelinje fra sidste menupunkt */
+}
+
+/* Styling af selve menu-knappen */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Smooth animation for alle ændringer */
+}
+
+/* Hover effekt på menu items */
+.menu-item:hover {
+    color: #4E7046; /* Grøn farve ved hover */
+    padding-left: 10px; /* Rykker teksten lidt til højre */
+}
+
+/* Pil-ikon ved siden af menu items */
+.arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.5s ease; /* Smooth rotation animation */
+}
+
+/* Skjult indhold under hver menu item */
+.menu-content {
+    max-height: 0; /* Starter skjult */
+    overflow: hidden;
+    transition: all 0.5s ease; /* Smooth åbne/lukke animation */
+    border-radius: 0 0 8px 8px;
+}
+
+/* Styling af tekst i menu-indhold */
+.menu-content p {
+    margin: 0;
+    padding: 15px;
+    color: #000;
+}
+
+/* Aktiv tilstand af menu items */
+.menu-item-container.active .arrow {
+    transform: rotate(90deg); /* Roterer pilen når menuen er åben */
+}
+
+.menu-item-container.active .menu-content {
+    max-height: 200px; /* Viser indholdet når aktivt */
+}
+
+/* KONTAKTFORMULAR STYLES - Styling af kontaktformularen og dens elementer*/
+.contact-section {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 400px); /* Sikrer minimum højde */
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Input felt styling */
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Fokus tilstand på input felter */
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: #4E7046;
+    box-shadow: 0 0 0 0.2rem rgba(78, 112, 70, 0.25);
+}
+
+/* Success og error beskeder */
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* ANMELDELSER SEKTION STYLES - Styling af kundeanmeldelser */
+.reviews-section {
+    padding: 60px 0;
+}
+
+/* Skjul navigationspiler i anmeldelses-carousellen */
+#reviewsCarousel .carousel-control-prev,
+#reviewsCarousel .carousel-control-next {
+    display: none;
+}
+
+.review-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Styling af anmeldelses tekst og forfatter */
+.review-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center; /* Centrerer anmeldelsesteksten */
+}
+
+.author-name {
+    font-weight: bold;
+    text-align: center; /* Centrerer forfatternavnet */
+}
+
+/* VEJR SEKTION STYLES - Styling af vejrkort for hver lokation */
+.weather-section {
+    background-color: #f8f9fa;
+}
+
+.weather-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px); /* Kort løfter sig ved hover */
+}
+
+/* Vejr information styling */
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4E7046;
+}
+
+.description {
+    text-transform: capitalize; /* Første bogstav stort i vejrbeskrivelse */
+}
+
+.weather-card h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-icon img {
+    width: 64px;
+    height: 64px;
+}
+
+.details {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* FOOTER STYLES */
+.footer {
+    background-color: #715745; /* Samme farve som navigation */
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.footer .social-links a:hover {
+    color: #4E7046; /* Grøn farve ved hover på sociale links */
+}
+
+/* RESPONSIVT DESIGN - "media query" */
+@media (max-width: 768px) {
+    .review-card {
+        padding: 20px; /* Mindre padding på mobil */
+        margin: 10px;
+    }
+
+    .review-text {
+        font-size: 1rem; /* Mindre tekst på mobil */
+    }
+
+    /* Skjul navigationsknapper på mobil */
+    #reviewsCarousel .carousel-control-prev,
+    #reviewsCarousel .carousel-control-next {
+        display: none;
+    }
+}
+
